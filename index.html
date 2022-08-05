@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Animated slider Website</title>
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+    <body onload="slider()">
+        <div class="banner">
+            <div class="slider">
+                <img src="images/background.jpg" id="slideImg">
+            </div>
+            <div class="overlay">
+                <div class="navbar">
+                    <div class="logo">
+                        <img src="images/logo.jpeg">
+                    </div>
+                    <div class="menu-icons">
+                        <img src="images/userIcon.jpg">
+                        <img src="images/cartIcon.jpg">
+                        <img src="images/menuIcon.jpg">
+                        
+                    </div>
+                </div>
+                 <div class="content">
+                    <h1>LET'S START TO DESIGN</h1>
+                    <h3>Invest in Dancolion Groups</h3>
+
+                    <div>
+                        <button type="button">WATCH MORE</button>
+                        <button type="button" class="btn-2">SUBSCRIBE</button>
+
+                    </div>
+                    
+                 </div>
+            </div>
+        </div>
+
+<script>
+    var slideImg = document.getElementById("slideImg");
+
+    var images=new Array (
+        "images/background.jpg",
+        "images/background2.jpg",
+        "images/background3.jpg",
+        "images/background6.jpg"
+        
+    );
+
+    var len = images.length;
+    var i=0;
+
+    function slider(){
+        if(i > len-1){
+            i=0
+        }
+        slideImg.src=images[i];
+        i++;
+        setTimeout('slider()',3000);
+    }
+
+    
+</script>
+
+
+    </body>
+</html>
